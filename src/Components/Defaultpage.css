@@ -1,0 +1,37 @@
+
+
+.headercontent{
+    background-color: rgb(169, 169, 169);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    padding: 5px;
+}
+.headercontenth1{
+       font-size: 35px;
+       font-weight: bold;
+       color: rgb(240, 87, 4);
+       padding-left: 2%;
+       justify-content: center;
+}
+.Content{
+    min-height: 90vh;
+}
+.Avatar{
+    padding-right: 2%;
+    justify-content: center;
+}
+.anchorlinkbooking{
+    text-decoration: none;
+}
+.anchorlinkhead{
+    text-decoration: none;
+    color: rgb(255, 72, 6);
+}
+.userpageicos{
+  color:firebrick;
+  margin-left: 5px;
+  width: 30px;
+}
+.defaultlogoimage{
+    width: 30px;
+    height: 30px;
+}
