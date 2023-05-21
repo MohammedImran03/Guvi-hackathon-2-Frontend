@@ -173,7 +173,7 @@ export default function Addproduct(){
                       </div> 
                     </Grid>
                     </Grid>
-                    <div><button className="createproductbutton" disabled={!form["name"] || !form["model"]|| !form["price"]|| !form["normalprice"]|| !form["image"]|| !form["priceperhour"]} onClick={validatetextboxes}>Create Product</button></div>
+                    <div><button className="createproductbutton" disabled={!form["productid"] ||!form["name"] || !form["model"]|| !form["price"]|| !form["normalprice"]|| !form["image"]|| !form["priceperhour"]|| !form["stocks"]} onClick={validatetextboxes}>Create Product</button></div>
                     </div>  
                     </Grid>
                     </Grid>
