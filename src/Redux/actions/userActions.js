@@ -8,7 +8,7 @@ export const userlogin=(reqobj)=>async dispatch=>{
         localStorage.setItem('user', JSON.stringify(response.data))
         message.success('Login Sucessful😊')
         setTimeout(()=>{
-         window.location.href='/';
+         window.location.replace='/';
        },500);
         dispatch({type: 'LOADING', payload:false})
      } catch(error){
@@ -24,11 +24,9 @@ export const userRegister=(reqobj)=>async dispatch=>{
        await axios.post('https://rentalapp-qkk4.onrender.com/users/register', reqobj)
        message.success('Registeration Succesfull 😊Login Now')
        setTimeout(()=>{
-         window.location.href='/Login';
-       },500);
-       
-       dispatch({type: 'LOADING', payload:false})
-       
+         window.location.replace='/Login';
+       },500);      
+       dispatch({type: 'LOADING', payload:false});      
     } catch(error){
        console.log(error)
        dispatch({type: 'LOADING', payload:false});
