@@ -4,7 +4,7 @@ import { message } from 'antd';
 export const userlogin=(reqobj)=>async dispatch=>{
      dispatch({type: 'LOADING', payload:true})
      try {
-        const response = await axios.post('https://equipme-rentalapp.onrender.com/users/login', reqobj)
+        const response = await axios.post('/users/login', reqobj)
         localStorage.setItem('user', JSON.stringify(response.data))
         message.success('Login Sucessful😊')
         setTimeout(()=>{
@@ -21,7 +21,7 @@ export const userlogin=(reqobj)=>async dispatch=>{
 export const userRegister=(reqobj)=>async dispatch=>{
     dispatch({type: 'LOADING', payload:true})
     try {
-       await axios.post('https://equipme-rentalapp.onrender.com/users/register', reqobj)
+       await axios.post('/users/register', reqobj)
        message.success('Registeration Succesfull 😊Login Now')
        setTimeout(()=>{
          window.location.href='/Login';

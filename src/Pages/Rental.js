@@ -266,9 +266,9 @@ export default function Rentalpage() {
                   <h4>
                     Total Price:
                     {
-                      (bussinessamount = (
+                      (bussinessamount = Math.round(
                         totalamount + (delivery && (totalamount / 100) * 8.5)
-                      ).toFixed(1))
+                      ))
                     }{" "}
                     INR{" "}
                   </h4>{" "}
