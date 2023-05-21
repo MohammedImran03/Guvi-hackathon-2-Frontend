@@ -4,7 +4,7 @@ import { message } from 'antd';
 export const getallProducts=()=>async dispatch=>{
      dispatch({type: 'LOADING', payload:true})
      try {
-        const response = await axios.get('/Products')
+        const response = await axios.get('https://equipme-rentalapp.onrender.com/Products')
         dispatch({type:'GET_ALL_PRODUCTS', payload:response.data})
         dispatch({type: 'LOADING', payload:false})
      } catch(error){
@@ -16,7 +16,7 @@ export const getallProducts=()=>async dispatch=>{
 export const addProducts=(reqobj)=>async dispatch=>{
    dispatch({type: 'LOADING', payload:true})
    try {
-      await axios.post('/Products/createproduct', reqobj);
+      await axios.post('https://equipme-rentalapp.onrender.com/Products/createproduct', reqobj);
       dispatch({type: 'LOADING', payload:false});
       message.success('New Product added Successfully 👍')
       setTimeout(()=>{
@@ -31,7 +31,7 @@ export const addProducts=(reqobj)=>async dispatch=>{
 export const editProducts=(reqobj)=>async dispatch=>{
    dispatch({type: 'LOADING', payload:true})
    try {
-      await axios.post('/Products/editproduct', reqobj);
+      await axios.post('https://equipme-rentalapp.onrender.com/Products/editproduct', reqobj);
       dispatch({type: 'LOADING', payload:false});
       message.success('Prdocut details Updated Successfully 👍')
       setTimeout(()=>{
@@ -46,7 +46,7 @@ export const editProducts=(reqobj)=>async dispatch=>{
 export const deleteProduct=(reqobj)=>async dispatch=>{
    dispatch({type: 'LOADING', payload:true})
    try {
-      await axios.post('/Products/deleteproduct', reqobj);
+      await axios.post('https://equipme-rentalapp.onrender.com/Products/deleteproduct', reqobj);
       dispatch({type: 'LOADING', payload:false});
       message.success('Prdocut deleted Successfully 👍')
       setTimeout(()=>{
