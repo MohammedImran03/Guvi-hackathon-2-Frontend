@@ -24,7 +24,7 @@ export default function Userbookings() {
     <Defaultpage>
         <div className="buttonavigate"><button onClick={gohome} className="backbutton">Home</button></div>
         {loading && <CircularIndeterminate/>}
-      <h1>MY Bookings</h1>
+      <h1>MY Recent Bookings</h1>
       <h3 className="myorder text-start">My Orders</h3>
       {/* <Box sx={{ flexGrow: 1 }}> */}
         <Grid
